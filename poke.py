@@ -50,7 +50,7 @@ def main():
             
             # --- MOVES ---
             st.subheader("Moves")
-            for move in data.moves[:10]:  # show only first 10 for brevity
+            for move in data.moves:
                 with st.expander(f"{move.move.name.capitalize()}"):
                     for vg in move.version_group_details:
                         st.write(f"- Learned at level {vg.level_learned_at} via {vg.move_learn_method.name} in {vg.version_group.name}")
