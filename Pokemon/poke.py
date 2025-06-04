@@ -20,10 +20,9 @@ def main():
             st.header(f"{data.name.capitalize()} (ID: {data.id})")
             st.image(data.sprites.front_default)
             st.markdown(f"**Base Experience:** {data.base_experience}", help="Base experience points gained when defeated.")
-            st.write(f"**Height:** {data.height}")
-            st.write(f"**Weight:** {data.weight}")
-            st.write(f"**Order:** {data.order}")
-            st.write(f"**Is Default:** {data.is_default}")
+            st.write(f"**Height:** {data.height/10} m")
+            st.write(f"**Weight:** {data.weight/10} kg")
+            st.markdown(f"**Order:** {data.order}", help="Order for sorting. Almost national order, except families are grouped together.")
 
             # --- ABILITIES ---
             st.subheader("Abilities")
